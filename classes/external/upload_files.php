@@ -122,7 +122,7 @@ class upload_files extends external_api {
             // Initialize WeaviateConnector object
             $connector = new \block_uteluqchatbot\weaviate_connector($apiUrl, $apiKey, $cohereApiKey);
 
-            $courseName = get_string('collection_prefix', 'block_uteluqchatbot') . $params['courseid'];
+            $courseName = 'Course_collection_' . $params['courseid'];
             
             // Delete existing collection and recreate it
             $connector->delete_collection($courseName);
